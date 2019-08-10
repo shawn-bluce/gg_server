@@ -34,7 +34,7 @@ password: 密码
 graph: 图片文件
 ```
 
-接口接收`FormData`格式的数据，
+接口接收`FormData`格式的数据，返回Json字符串，其中包含完整的图片url。
 
 # 注意
 
