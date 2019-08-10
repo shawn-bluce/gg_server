@@ -1,4 +1,7 @@
 # coding:utf-8
+"""
+直接在DjangoUser中创建一个新的用户
+"""
 
 import os
 import django
