@@ -16,3 +16,6 @@ bash:
 build:
 	echo "通过Dockerfile构建镜像"
 	docker-compose build
+
+create_user:
+	docker-compose run --rm development python create_user.py
