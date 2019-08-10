@@ -21,5 +21,7 @@ if __name__ == '__main__':
         else:
             break
     password = getpass.getpass()
-    User.objects.create(username=username).set_password(raw_password=password)
+    user = User.objects.create(username=username)
+    user.set_password(raw_password=password)
+    user.save()
 print('\033[0;32m{}\033[0m'.format('SUCCESS'))
