@@ -1,6 +1,6 @@
 # 项目介绍
 
-这是个人使用的图床，目前只有最基础的传图功能。`GG`这个听起来很诡异的名字是对`GNU -> GNU is Not Unix`这种递归命名法的一次拙劣的模仿，`GG -> GG is Graphbed`。客户端在这里[https://github.com]](https://github.com)
+这是个人使用的图床，目前只有最基础的传图功能。`GG`这个听起来很诡异的名字是对`GNU -> GNU is Not Unix`这种递归命名法的一次拙劣的模仿，`GG -> GG is Graphbed`。客户端在这里 [https://github.com/shawn-bluce/gg_client](https://github.com/shawn-bluce/gg_client)
 
 # 部署条件
 
@@ -38,4 +38,5 @@ graph: 图片文件
 
 # 注意
 
-一切上传的文件都在项目目录下的`data`目录里，如需迁移服务记得将文件带走。
+1. 一切上传的文件都在项目目录下的`data`目录里，如需迁移服务记得将文件带走。
+2. 如果访问图片出现403则是nginx无权访问图片所属目录。例如将项目放在root用户的主目录下部署，此时`/root/`目录的权限默认为`rwxr-x---`，也就是nginx无权进入到该目录中，也就无法正常使用了。需要将项目迁到nginx有权访问的目录下重新部署。
