@@ -1,0 +1,28 @@
+version: "3"
+services:
+
+  development:
+    image: gg-server
+    build: .
+    command: /bin/bash
+    volumes:
+      - .:/code
+      - /data/static:/data/static
+    ports:
+      - "6688:6688"
+    environment:
+      - PYTHONPATH=/code
+
+  product:
+    image: gg-server
+    build: .
+    command: supervisord -c /code/deploy/supervisord.conf
+    restart: always
+    volumes:
+      - .:/code
+      - /data/static:/data/static
+    ports:
+      - "6688:6688"
+    environment:
+      - PYTHONPATH=/code
+
