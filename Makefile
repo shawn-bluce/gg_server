@@ -21,4 +21,4 @@ create_user:
 	docker-compose run --rm development python create_user.py
 
 run_production:
-	docker-compose up product -d
+	docker-compose up -d product
