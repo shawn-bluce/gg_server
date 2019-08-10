@@ -7,7 +7,8 @@ services:
     command: /bin/bash
     volumes:
       - .:/code
-      - /data/static:/data/static
+      - ./data/static:/data/static
+    network_mode: bridge
     ports:
       - "6688:6688"
     environment:
@@ -20,7 +21,8 @@ services:
     restart: always
     volumes:
       - .:/code
-      - /data/static:/data/static
+      - ./data/static:/data/static
+    network_mode: bridge
     ports:
       - "6688:6688"
     environment:
